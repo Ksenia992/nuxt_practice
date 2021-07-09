@@ -12,7 +12,7 @@
     <p>Country: {{ json.location.country }}</p>
     <p>City: {{ json.location.city }}</p>
     <!-- <img src="this.pic" alt="avatar" /> -->
-    <img src="json.picture.large" alt="avatar" />
+    <img :src="json.picture.large" alt="avatar" />
   </div>
 </template>
 
