@@ -63,7 +63,7 @@ import {
 })
 export default class Login extends Vue {
   name: string = "";
-  passord: string = "";
+  password: string = "";
   email: string = "";
   loading: boolean = false;
 
@@ -74,6 +74,9 @@ export default class Login extends Vue {
   submit() {
     this.$refs.observer.validate();
     Localstorage.set("userKey", "kfdjbfkjdsbfkjbskjf");
+    if (this.json) {
+      this.$router.push("/main");
+    }
   }
   async facebookLog() {
     this.loading = true;
